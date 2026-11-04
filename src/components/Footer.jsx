@@ -48,7 +48,7 @@ export const Footer = () => {
             <a href="#home" className="footer-brand-lockup" aria-label="GloovUp Home">
               <div className="brand-inline-wordmark">
                 <img
-                  src="/images/gloovup-g-logo.png"
+                  src="/images/gloovup-g-pure-blue.png"
                   alt="G"
                   className="brand-inline-g-icon"
                   loading="lazy"

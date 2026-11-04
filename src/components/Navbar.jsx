@@ -73,7 +73,7 @@ export const Navbar = () => {
           >
             <div className="brand-inline-wordmark">
               <img
-                src="/images/gloovup-g-logo.png"
+                src="/images/gloovup-g-pure-blue.png"
                 alt="G"
                 className="brand-inline-g-icon"
                 loading="eager"

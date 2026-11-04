@@ -137,13 +137,13 @@ export const WhyUsSection = () => {
           <div className="query-hub-header">
             <div className="query-badge">
               <MessageCircle size={14} className="query-badge-icon" />
-              <span>Direct WhatsApp Instant Connect</span>
+              <span>Direct Instant Connect</span>
             </div>
             <h3 className="query-hub-title">
-              Have Any Query? <span className="text-gradient">Ask Directly on WhatsApp</span>
+              Have Any Query? <span className="text-gradient">Ask Directly</span>
             </h3>
             <p className="query-hub-subtitle">
-              Type your custom requirement or question below. Our senior tech architect will reply instantly to your WhatsApp.
+              Type your custom requirement or question below. Our senior tech architect will reply instantly.
             </p>
           </div>
 
@@ -171,7 +171,7 @@ export const WhyUsSection = () => {
 
             <button type="submit" className="query-submit-btn">
               <MessageCircle size={18} />
-              <span>Send Query on WhatsApp</span>
+              <span>Send Query</span>
               <Send size={16} />
             </button>
           </form>
@@ -198,7 +198,7 @@ export const WhyUsSection = () => {
           <div className="query-hub-footer">
             <div className="direct-item">
               <CheckCircle2 size={16} className="text-cyan-accent" />
-              <span>Instant Response on WhatsApp • Average reply in 5 mins</span>
+              <span>Instant Response • Average reply in 5 mins</span>
             </div>
             <div className="direct-item">
               <PhoneCall size={16} className="text-violet-accent" />

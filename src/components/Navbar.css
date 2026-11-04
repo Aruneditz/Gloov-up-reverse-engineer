@@ -49,7 +49,7 @@
 .brand-inline-wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 1px;
+  gap: 0;
 }
 
 .brand-inline-g-icon {
@@ -70,7 +70,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  margin-left: 2px;
+  margin-left: -1px;
 }
 
 /* Legacy support */
