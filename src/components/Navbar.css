@@ -32,7 +32,48 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(120, 87, 255, 0.1);
 }
 
-/* Brand Group */
+/* Brand Group - Unified Blue Wordmark matching Image 2 */
+.navbar-brand-lockup {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-brand-lockup:hover {
+  transform: scale(1.04);
+}
+
+.brand-inline-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.brand-inline-g-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+}
+
+.brand-inline-text {
+  font-family: var(--font-heading), 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #38BDF8;
+  background: linear-gradient(135deg, #4DEBFF 0%, #38BDF8 50%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/* Legacy support */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -43,31 +84,29 @@
 }
 
 .brand-logo-frame {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 15px rgba(0, 229, 153, 0.15);
+  border-radius: 9px;
+  background: #000000;
+  border: 1px solid rgba(0, 229, 153, 0.3);
+  box-shadow: 0 0 15px rgba(0, 229, 153, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-brand:hover .brand-logo-frame {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 229, 153, 0.35);
-  border-color: rgba(0, 229, 153, 0.4);
+  box-shadow: 0 0 25px rgba(0, 229, 153, 0.45);
+  border-color: rgba(0, 229, 153, 0.6);
 }
 
-/* Scale the 512x512 logo so the center G is prominent and sharp */
 .brand-logo-img {
-  width: 145px;
-  height: 145px;
-  max-width: none;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   pointer-events: none;
 }

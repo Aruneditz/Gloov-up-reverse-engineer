@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 // Sections
 import { HeroSection } from './sections/HeroSection';
 import { ClientMarquee } from './sections/ClientMarquee';
+import { WebsiteShowcaseSection } from './sections/WebsiteShowcaseSection';
 import { AuthoritySection } from './sections/AuthoritySection';
 import { PortfolioSection } from './sections/PortfolioSection';
 import { BookingOfferSection } from './sections/BookingOfferSection';
@@ -29,6 +30,7 @@ const MainLayout = () => {
       <main>
         <HeroSection />
         <ClientMarquee />
+        <WebsiteShowcaseSection />
         <AuthoritySection />
         <PortfolioSection />
         <BookingOfferSection />

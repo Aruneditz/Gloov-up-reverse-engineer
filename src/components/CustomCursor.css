@@ -1,27 +1,56 @@
-.custom-cursor-dot {
+.cursor-glow-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #4DEBFF;
-  box-shadow: 0 0 15px #4DEBFF, 0 0 30px #7857FF;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
-  z-index: 9999;
-  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
-  mix-blend-mode: difference;
+  z-index: 50;
+  overflow: hidden;
 }
 
-.custom-cursor-dot.cursor-hover {
-  width: 38px;
-  height: 38px;
-  background: rgba(77, 235, 255, 0.4);
-  box-shadow: 0 0 25px rgba(77, 235, 255, 0.8);
+/* Broad ambient spotlight - professional neo-digital luxury aura */
+.cursor-ambient-spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.12) 0%,
+    rgba(37, 99, 235, 0.06) 35%,
+    rgba(120, 87, 255, 0.02) 60%,
+    transparent 75%
+  );
+  filter: blur(24px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Delicate reactive focal glow */
+.cursor-focal-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.35) 0%,
+    rgba(37, 99, 235, 0.15) 50%,
+    transparent 80%
+  );
+  filter: blur(8px);
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
 @media (pointer: coarse) {
-  .custom-cursor-dot {
+  .cursor-glow-container {
     display: none !important;
   }
 }

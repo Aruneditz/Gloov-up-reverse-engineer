@@ -64,27 +64,21 @@ export const Navbar = () => {
     >
       <div className="container">
         <nav className="navbar-container" aria-label="Main Navigation">
-          {/* Official GloovUp Brand & Provided G Logo */}
+          {/* Official GloovUp Brand Lockup - Matching User's Image 2 in Blue */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="navbar-brand"
+            className="navbar-brand-lockup"
             aria-label="GloovUp Home"
           >
-            <div className="brand-logo-frame">
+            <div className="brand-inline-wordmark">
               <img
                 src="/images/gloovup-g-logo.png"
-                alt="GloovUp G Logo"
-                className="brand-logo-img"
+                alt="G"
+                className="brand-inline-g-icon"
                 loading="eager"
               />
-            </div>
-            <div className="brand-name-group">
-              <span className="brand-name">
-                {siteData.header.logoText}
-                <span className="brand-highlight">{siteData.header.logoHighlight}</span>
-              </span>
-              <span className="brand-sub">STUDIO</span>
+              <span className="brand-inline-text">loov Up</span>
             </div>
           </a>
 
