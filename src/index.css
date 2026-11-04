@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #040612;
+    color: #f3f4f6;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Custom Glowing Cyber Scrollbar in Proper Blue */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040612;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #1e3a8a 0%, #2563eb 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.8);
+  }
+}
+
+@layer utilities {
+  /* Cosmic Starry Dotted Matrix Background in Proper Blue */
+  .cyber-matrix {
+    background-image: 
+      radial-gradient(rgba(96, 165, 250, 0.12) 1px, transparent 1px),
+      radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+    background-size: 36px 36px, 72px 72px;
+    background-position: 0 0, 18px 18px;
+  }
+
+  /* Enhanced Frosted Glass with Neon Rim */
+  .glass-panel {
+    background: rgba(10, 14, 36, 0.78);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(99, 102, 241, 0.08);
+  }
+  
+  .glass-card {
+    background: rgba(14, 20, 46, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(129, 140, 248, 0.55);
+    box-shadow: 0 15px 40px -10px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(99, 102, 241, 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Bottom Glass Dock */
+  .glass-dock {
+    background: rgba(4, 6, 18, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(129, 140, 248, 0.35);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9), 0 -2px 15px rgba(99, 102, 241, 0.2);
+  }
+
+  /* Glowing Text Typography in Proper Electric/Royal Blue */
+  .glow-text-indigo, .glow-text-primary, .glow-text-sky, .glow-text-blue {
+    color: #ffffff;
+    text-shadow: 
+      0 0 15px rgba(96, 165, 250, 0.95),
+      0 0 35px rgba(59, 130, 246, 0.65);
+  }
+
+  .glow-text-cyan {
+    color: #ffffff;
+    text-shadow: 
+      0 0 15px rgba(96, 165, 250, 0.9),
+      0 0 35px rgba(37, 99, 235, 0.55);
+  }
+
+  /* Text Gradients in Proper Blue for all needed sentences */
+  .text-gradient-primary, .text-gradient-sky, .text-gradient-blue {
+    background: linear-gradient(135deg, #ffffff 15%, #93c5fd 40%, #60a5fa 70%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-indigo, .text-gradient-cyan, .text-gradient-magenta {
+    background: linear-gradient(135deg, #eff6ff 0%, #93c5fd 35%, #60a5fa 70%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Neon Glowing Card Border */
+  .neon-glow-card {
+    position: relative;
+    border-radius: 1.5rem;
+    background: #0a0e24;
+  }
+
+  .neon-glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -1.5px;
+    border-radius: 1.55rem;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #2563eb, #60a5fa, #3b82f6, #1d4ed8);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Glowing Laser Divider in Proper Blue */
+  .laser-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.2) 20%, #60a5fa 50%, rgba(59, 130, 246, 0.2) 80%, transparent 100%);
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.9), 0 0 24px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Breathing Glow Button in Proper Royal Blue */
+  .btn-glow-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #3b82f6 100%);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-glow-primary:hover {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.85), 0 0 70px rgba(96, 165, 250, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.03);
+  }
+}
