@@ -305,3 +305,47 @@ h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* =========================================================================
+   High-Performance Optimization (Lag-Free 60FPS on Mobile and Laptops)
+   ========================================================================= */
+
+/* Eliminate underlines universally on buttons and action links */
+a, a:hover, a:focus, a:active,
+.btn-primary, .btn-secondary, .btn-glow, .btn-teal,
+.showcase-view-all-btn, .overlay-cta-btn, .query-submit-btn {
+  text-decoration: none !important;
+}
+
+/* GPU hardware acceleration hints for smooth scrolling */
+.marquee-track-left,
+.marquee-track-right {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+  /* Replace heavy layered blur filters with solid lightweight dark tones on mobile */
+  .why-card,
+  .pricing-card,
+  .testimonial-card,
+  .video-review-card,
+  .authority-card,
+  .how-step-card,
+  .why-query-hub,
+  .browser-mockup {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(18, 20, 48, 0.96) !important;
+  }
+
+  /* Disable heavy continuous floating orbs on mobile */
+  .hero-ambient-mesh,
+  .glow-orb,
+  .final-cta-glow-1,
+  .final-cta-glow-2,
+  .offer-glow-layer {
+    display: none !important;
+  }
+}

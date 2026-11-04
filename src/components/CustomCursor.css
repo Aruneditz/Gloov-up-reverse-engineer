@@ -5,51 +5,34 @@
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  z-index: 50;
+  z-index: 25;
   overflow: hidden;
 }
 
-/* Broad ambient spotlight - professional neo-digital luxury aura */
+/* Ultra-lightweight ambient spotlight - Zero blur filters, pure GPU gradient */
 .cursor-ambient-spotlight {
   position: absolute;
   top: 0;
   left: 0;
-  width: 380px;
-  height: 380px;
+  width: 320px;
+  height: 320px;
+  margin-top: -160px;
+  margin-left: -160px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
     rgba(56, 189, 248, 0.12) 0%,
-    rgba(37, 99, 235, 0.06) 35%,
-    rgba(120, 87, 255, 0.02) 60%,
+    rgba(37, 99, 235, 0.05) 35%,
+    rgba(120, 87, 255, 0.015) 60%,
     transparent 75%
   );
-  filter: blur(24px);
-  mix-blend-mode: screen;
   pointer-events: none;
-  will-change: transform, opacity;
+  will-change: transform;
+  transform: translate3d(-1000px, -1000px, 0);
 }
 
-/* Delicate reactive focal glow */
-.cursor-focal-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(56, 189, 248, 0.35) 0%,
-    rgba(37, 99, 235, 0.15) 50%,
-    transparent 80%
-  );
-  filter: blur(8px);
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-@media (pointer: coarse) {
+/* Always hide on mobile, tablet, and touch screens */
+@media (max-width: 1024px), (pointer: coarse) {
   .cursor-glow-container {
     display: none !important;
   }

@@ -25,12 +25,12 @@ export const WebsiteShowcaseSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto advance slides every 5 seconds unless hovered/paused
+  // Auto advance slides every 5.5 seconds unless hovered/paused
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % SHOWCASE_ITEMS.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(interval);
   }, [isPaused]);
 
@@ -50,7 +50,7 @@ export const WebsiteShowcaseSection = () => {
         {/* Header */}
         <div className="showcase-header">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="section-badge"
@@ -60,10 +60,10 @@ export const WebsiteShowcaseSection = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="showcase-title"
           >
             Explore Our Recent{' '}
@@ -71,10 +71,10 @@ export const WebsiteShowcaseSection = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="showcase-subtitle"
           >
             Real production websites crafted with bespoke digital design, lightning performance, and conversion-optimized architectures.
@@ -126,22 +126,23 @@ export const WebsiteShowcaseSection = () => {
               </div>
             </div>
 
-            {/* Browser Content Screen */}
+            {/* Browser Content Screen - Highly Optimized GPU Crossfade */}
             <div className="browser-screen">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentItem.id}
-                  initial={{ opacity: 0, scale: 0.98, filter: 'blur(8px)' }}
-                  animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, scale: 1.02, filter: 'blur(8px)' }}
-                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35, ease: 'easeInOut' }}
                   className="browser-image-wrap"
                 >
                   <img
                     src={currentItem.img}
                     alt={currentItem.title}
                     className="browser-screenshot"
-                    loading="lazy"
+                    loading="eager"
+                    decoding="async"
                   />
 
                   {/* Hover Overlay with Action Button */}
@@ -153,9 +154,10 @@ export const WebsiteShowcaseSection = () => {
                         href={PORTFOLIO_EXTERNAL_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="overlay-cta-btn"
+                        className="overlay-cta-btn no-underline"
+                        style={{ textDecoration: 'none' }}
                       >
-                        <span>View Live Project</span>
+                        <span style={{ textDecoration: 'none' }}>View Live Project</span>
                         <ExternalLink size={16} />
                       </a>
                     </div>
@@ -189,6 +191,7 @@ export const WebsiteShowcaseSection = () => {
                       alt={`Thumbnail ${item.id}`}
                       className="thumb-img"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="thumb-label">
@@ -200,9 +203,9 @@ export const WebsiteShowcaseSection = () => {
           </div>
         </div>
 
-        {/* Bottom Call to Action */}
+        {/* Bottom Call to Action - Underline explicitly removed */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="showcase-footer-cta"
@@ -212,10 +215,11 @@ export const WebsiteShowcaseSection = () => {
             href={PORTFOLIO_EXTERNAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="showcase-view-all-btn"
+            className="showcase-view-all-btn no-underline"
+            style={{ textDecoration: 'none' }}
           >
             <Monitor size={18} />
-            <span>View Full Portfolio (100+ Projects)</span>
+            <span style={{ textDecoration: 'none' }}>View Full Portfolio (100+ Projects)</span>
             <ExternalLink size={18} />
           </a>
         </motion.div>

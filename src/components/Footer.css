@@ -231,3 +231,16 @@
     align-items: flex-start;
   }
 }
+
+/* Footer Blue Wordmark Lockup */
+.footer-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none !important;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease;
+}
+
+.footer-brand-lockup:hover {
+  transform: scale(1.04);
+}

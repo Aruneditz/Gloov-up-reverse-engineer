@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, ArrowUp, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Sparkles } from 'lucide-react';
 import { siteData } from '../data/siteData';
 import './Footer.css';
 
@@ -39,30 +39,21 @@ const SocialIcon = ({ platform }) => {
 export const Footer = () => {
   const footer = siteData.footer;
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="footer-top-grid">
-          {/* Brand Info */}
+          {/* Brand Info - Matching Image 4 in Blue */}
           <div className="footer-brand-col">
-            <a href="#home" className="footer-brand-link">
-              <div className="footer-logo-frame">
+            <a href="#home" className="footer-brand-lockup" aria-label="GloovUp Home">
+              <div className="brand-inline-wordmark">
                 <img
                   src="/images/gloovup-g-logo.png"
-                  alt="GloovUp G Logo"
-                  className="footer-logo-img"
+                  alt="G"
+                  className="brand-inline-g-icon"
+                  loading="lazy"
                 />
-              </div>
-              <div className="footer-brand-text">
-                <span className="footer-brand-title">
-                  {siteData.header.logoText}
-                  <span className="text-brand-teal">{siteData.header.logoHighlight}</span>
-                </span>
-                <span className="footer-brand-studio">DIGITAL TECHNOLOGY</span>
+                <span className="brand-inline-text">loov Up</span>
               </div>
             </a>
 
@@ -103,7 +94,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Social Links & Back to top */}
+          {/* Social Links */}
           <div className="footer-social-col">
             <h4 className="footer-col-title">Connect</h4>
             <p className="footer-social-hint">Follow our design journeys, case studies & updates:</p>
@@ -121,11 +112,6 @@ export const Footer = () => {
                 </a>
               ))}
             </div>
-
-            <button onClick={scrollToTop} className="back-to-top-footer-btn">
-              <span>Back to Top</span>
-              <ArrowUp size={15} />
-            </button>
           </div>
         </div>
 

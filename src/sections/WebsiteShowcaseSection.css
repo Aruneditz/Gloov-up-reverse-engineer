@@ -417,3 +417,34 @@
     height: 70px;
   }
 }
+
+/* Explicit underline removal for showcase links and buttons */
+.showcase-view-all-btn,
+.showcase-view-all-btn *,
+.overlay-cta-btn,
+.overlay-cta-btn * {
+  text-decoration: none !important;
+}
+
+.showcase-view-all-btn:hover,
+.showcase-view-all-btn:focus,
+.showcase-view-all-btn:active {
+  text-decoration: none !important;
+}
+
+/* Mobile & Laptop Performance Optimizations */
+.browser-screenshot {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+  .browser-mockup {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  .showcase-nav-btn {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(23, 26, 59, 0.95) !important;
+  }
+}
