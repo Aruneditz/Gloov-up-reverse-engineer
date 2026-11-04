@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10b981" />
+    <link rel="canonical" href="https://gloovup.com/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>Premium Website Development Services | GloovUp</title>
+    <meta name="description" content="Grow your business with premium high-converting websites and landing pages by GloovUp." />
+    <meta name="author" content="GloovUp" />
+    <meta name="keywords" content="website development, landing page design, premium websites, ecommerce, GloovUp, conversion-focused websites" />
+
+    <meta property="og:title" content="Premium Website Development Services | GloovUp" />
+    <meta property="og:description" content="Grow your business with premium high-converting websites and landing pages by GloovUp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Premium Website Development Services | GloovUp" />
+    <meta name="twitter:description" content="Grow your business with premium high-converting websites and landing pages by GloovUp." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <script type="module" crossorigin src="/assets/index-CZ1SNgYI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BeeOjr97.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- Meta Pixel Noscript Fallback -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2055814681979321&ev=PageView&noscript=1"/>
+    </noscript>
+  </body>
+</html>

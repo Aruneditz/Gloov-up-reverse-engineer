@@ -1,0 +1,102 @@
+.floating-actions-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.back-to-top-btn {
+  background: rgba(23, 26, 59, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top-btn:hover {
+  background: rgba(120, 87, 255, 0.35);
+  border-color: var(--color-cyan);
+  transform: translateY(-3px);
+  color: var(--color-cyan);
+}
+
+.whatsapp-floating-btn {
+  background: linear-gradient(135deg, #00E599 0%, #00B377 100%);
+  color: #061a11;
+  box-shadow: 0 10px 30px rgba(0, 229, 153, 0.45);
+}
+
+.whatsapp-floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(0, 229, 153, 0.6);
+}
+
+.whatsapp-pulse-ping {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--color-brand-teal);
+  opacity: 0.75;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 64px;
+  background: rgba(16, 17, 43, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 153, 0.3);
+  color: var(--color-white);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-floating-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .floating-actions-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .floating-btn {
+    width: 46px;
+    height: 46px;
+  }
+}

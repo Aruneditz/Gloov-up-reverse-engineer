@@ -1,0 +1,50 @@
+:root {
+  /* Core Palette - Neo-Digital Luxury */
+  --color-midnight: #10112B;
+  --color-navy: #171A3B;
+  --color-navy-surface: #1e224a;
+  --color-navy-card: rgba(23, 26, 59, 0.7);
+  --color-violet: #7857FF;
+  --color-cyan: #4DEBFF;
+  --color-magenta: #EC67C9;
+  --color-lavender: #D9D3FF;
+  --color-white: #FFFFFF;
+  --color-muted: #A6A8BD;
+  --color-muted-dark: #6e7087;
+
+  /* Brand Emerald/Teal from G logo */
+  --color-brand-teal: #00E599;
+  --color-brand-teal-glow: rgba(0, 229, 153, 0.4);
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #7857FF 0%, #4DEBFF 100%);
+  --grad-accent: linear-gradient(135deg, #EC67C9 0%, #7857FF 100%);
+  --grad-aurora: linear-gradient(135deg, #7857FF 0%, #4DEBFF 50%, #EC67C9 100%);
+  --grad-surface: linear-gradient(180deg, rgba(23, 26, 59, 0.8) 0%, rgba(16, 17, 43, 0.95) 100%);
+  --grad-border: linear-gradient(135deg, rgba(120, 87, 255, 0.4) 0%, rgba(77, 235, 255, 0.2) 50%, rgba(236, 103, 201, 0.3) 100%);
+  --grad-border-subtle: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-label: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* Borders & Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --glow-violet: 0 0 40px rgba(120, 87, 255, 0.25);
+  --glow-cyan: 0 0 40px rgba(77, 235, 255, 0.25);
+  --glow-teal: 0 0 35px rgba(0, 229, 153, 0.3);
+
+  /* Layout */
+  --container-max: 1320px;
+  --header-height: 84px;
+}

@@ -1,0 +1,83 @@
+.client-marquee-section {
+  position: relative;
+  padding: 3.5rem 0 4.5rem;
+  background: rgba(16, 17, 43, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.marquee-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.marquee-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.marquee-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.marquee-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.marquee-row {
+  padding: 0.35rem 0;
+}
+
+.brand-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  margin: 0 0.85rem;
+  background: rgba(23, 26, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  min-width: 170px;
+  height: 74px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.brand-logo-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(77, 235, 255, 0.4);
+  background: rgba(30, 34, 74, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(77, 235, 255, 0.2);
+}
+
+.client-brand-img {
+  max-height: 44px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.92) contrast(1.1);
+  transition: filter 0.3s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+.brand-logo-card:hover .client-brand-img {
+  filter: brightness(1.15) contrast(1.15);
+}
+
+.brand-label-tooltip {
+  display: none;
+}
